@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Jinhoy Boy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Images/Logo.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+
+            <div class="left-side">
+
+                <div class="image">
+                    <img src="Images/Logo.png" alt="Logo" width="32px" height="32px">
+                </div>
+                <div class="Logo">
+                    JINHO AN
+                </div>
+
+            </div>
+
+            <div class="right-side">
+                <!--<div class="nav-link-wrapper-active">
+                    <a href="home.html">Home</a>
+                </div>--->
+
+                <div class="nav-link-wrapper">
+                    <a href="#about">About</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="#unity-container">Projects</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="#contact">Contact</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="impression">
+        <div class="Greeting">
+            <h1 class="hi">HI.</h1>
+            <h1>I AM JINHO.</h1>
+            <p>This is my Website.</p>
+        </div>
+        <div class="Image2">
+            <img src="Images/Animation (2).gif" alt="wow">
+        </div>
+
+    </div>
+
+    <div class="about" id="about">
+        <div class="boxy">
+            <h2>About Me</h2>
+            <p>Hello, my name is Jinho.<br>
+
+            <p>My favorite pastime is procrastination, with which I’m learning a thing or two. This website serves as a documentation of the journey of new discoveries on my part.</p>
+        </div>
+        <div>
+            <img src="Images/Flower.png" alt="Flower" width="500" height="500">
+        </div>
+        
+    </div>
+
+    <div class="placeholder">
+        "I have the heart of a child. I keep it in a jar on my desk." - Stephen King
+    </div>
+
+
+
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas" width=960 height=600></canvas>
+        <div id="unity-loading-bar">
+          <div id="unity-logo"></div>
+          <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+          </div>
+        </div>
+        <div id="unity-warning"> </div>
+        <div id="unity-footer">
+          <div id="unity-fullscreen-button"></div>
+          <div id="unity-build-title"></div>
+        </div>
+      </div>
+      <script>
+        var container = document.querySelector("#unity-container");
+        var canvas = document.querySelector("#unity-canvas");
+        var loadingBar = document.querySelector("#unity-loading-bar");
+        var progressBarFull = document.querySelector("#unity-progress-bar-full");
+        var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        var warningBanner = document.querySelector("#unity-warning");
+  
+        // Shows a temporary message banner/ribbon for a few seconds, or
+        // a permanent error message on top of the canvas if type=='error'.
+        // If type=='warning', a yellow highlight color is used.
+        // Modify or remove this function to customize the visually presented
+        // way that non-critical warnings and error messages are presented to the
+        // user.
+        function unityShowBanner(msg, type) {
+          function updateBannerVisibility() {
+            warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+          }
+          var div = document.createElement('div');
+          div.innerHTML = msg;
+          warningBanner.appendChild(div);
+          if (type == 'error') div.style = 'background: red; padding: 10px;';
+          else {
+            if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+            setTimeout(function() {
+              warningBanner.removeChild(div);
+              updateBannerVisibility();
+            }, 5000);
+          }
+          updateBannerVisibility();
+        }
+  
+        var buildUrl = "Build";
+        var loaderUrl = buildUrl + "/Website.loader.js";
+        var config = {
+          dataUrl: buildUrl + "/Website.data.unityweb",
+          frameworkUrl: buildUrl + "/Website.framework.js.unityweb",
+          codeUrl: buildUrl + "/Website.wasm.unityweb",
+          streamingAssetsUrl: "StreamingAssets",
+          companyName: "DefaultCompany",
+          productName: "Cube-race",
+          productVersion: "0.1",
+          showBanner: unityShowBanner,
+        };
+  
+        // By default Unity keeps WebGL canvas render target size matched with
+        // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+        // Set this to false if you want to decouple this synchronization from
+        // happening inside the engine, and you would instead like to size up
+        // the canvas DOM size and WebGL render target sizes yourself.
+        // config.matchWebGLToCanvasSize = false;
+  
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+          container.className = "unity-mobile";
+          // Avoid draining fillrate performance on mobile devices,
+          // and default/override low DPI mode on mobile browsers.
+          config.devicePixelRatio = 1;
+          unityShowBanner('WebGL builds are not supported on mobile devices.');
+        } else {
+          canvas.style.width = "960px";
+          canvas.style.height = "600px";
+        }
+        loadingBar.style.display = "block";
+  
+        var script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+          createUnityInstance(canvas, config, (progress) => {
+            progressBarFull.style.width = 100 * progress + "%";
+          }).then((unityInstance) => {
+            loadingBar.style.display = "none";
+            fullscreenButton.onclick = () => {
+              unityInstance.SetFullscreen(1);
+            };
+          }).catch((message) => {
+            alert(message);
+          });
+        };
+        document.body.appendChild(script);
+      </script>
+  
+    
+    <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+      </p>
+      <p>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" />
+      </p>
+      <p>
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+
+    <footer>
+    <div class="footer_box" id="contact">
+        <div class="socials">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="Images/Twitter.png" alt="Twitter" width="96" height="96"></a>
+        </div>
+        <div class="socials">
+            <a href="https://www.instagram.com/jinho_an_aus/" target="_blank"><img src="Images/Instagram.png" alt="Instagram" width="96" height="96"></a>
+        </div>
+        <div class="socials">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="Images/Discord.png" alt="Discord" width="96" height="96"></a>
+        </div>
+    </div>
+    <div class="endbox">
+        <div class="empty"></div>
+        <div class="foot">
+            <p>© 2022 by Jinho An.</p>
+        </div>
+        <div class="Logo2">
+            <img src="Images/Logo.png" alt="Logo">
+        </div>
+    </div>
+    </footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+/* general*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  font-size: 150%;
+  font-family: "Lato", sans-serif;
+  color: rgb(24, 24, 24);
+}
+
+h2 {
+  color: #1768ac;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* navbar*/
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 38px;
+  font-weight: 600;
+}
+
+.left-side {
+  display: flex;
+}
+
+.right-side {
+  display: flex;
+}
+
+.nav-wrapper > .left-side > div {
+  margin-right: 8px;
+}
+
+.nav-wrapper > .right-side > div {
+  margin-right: 20px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+  color: #7c7c7c;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav-link-wrapper-active a {
+  color: #1768ac;
+}
+
+.nav-link-wrapper:hover {
+  border-bottom: 2px solid rgb(24, 24, 24);
+}
+
+.nav-link-wrapper a:hover {
+  color: rgb(24, 24, 24);
+}
+
+.hi {
+  color: #f58a07;
+}
+
+/* impression*/
+
+.impression {
+  display: flex;
+  justify-content: space-between;
+  padding: 64px;
+  padding-bottom: 20%;
+  font-size: 200%;
+}
+
+.placeholder {
+  padding: 64px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding: 64px;
+  font-size: 200%;
+}
+
+.about_text {
+  padding: 10%;
+}
+
+.Image2 {
+  width: 800px;
+  height: 800px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image_monkey {
+  position: absolute;
+  left: -24px;
+  top: 1328px;
+}
+
+.footer_box {
+  display: flex;
+  justify-content: center;
+}
+
+.socials {
+  padding: 10px;
+}
+
+footer {
+  padding: 100px;
+  padding-top: 200px;
+}
+
+.endbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty {
+  width: 227px;
+  height: 240px;
+  background: transparent;
+}
+
+.Logo {
+  color: #1768ac;
+}
+
+.Logo2 {
+  width: 227px;
+  height: 240px;
+}
+
+.boxy {
+  width: 1000px;
+  height: auto;
+}
+
+.boxy p {
+  font-size: 75%;
+}
+
+/*unity*/
+
+.unity-desktop {
+  display: flex;
+  justify-content: center;
+  padding: 15%;
+  padding-top: 15%;
+}
+
+@media only screen and (max-width: 1500px) {
+  .impression {
+    padding-bottom: 50%;
+    padding-top: 40%;
+  }
+
+  .placeholder {
+    padding-bottom: 70%;
+  }
+
+  .footer_box {
+    padding-top: 50%;
+  }
+}
