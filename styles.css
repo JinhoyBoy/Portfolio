@@ -165,7 +165,7 @@ footer {
   font-size: 75%;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1200px) {
   .impression {
     padding-bottom: 50%;
     padding-top: 40%;
