@@ -19,18 +19,19 @@ p {
   font-weight: 550;
 }
 
-.form {
-  display: flex;
-  justify-content: center;
-  padding: 5%;
+footer {
+  padding: 100px;
+  padding-top: 200px;
+  background-color: rgb(24, 24, 24);
+  color: white;
 }
+
+/* navbar*/
 
 .container {
   display: grid;
   grid-template-columns: 1fr;
 }
-
-/* navbar*/
 
 .nav-wrapper {
   display: flex;
@@ -81,11 +82,11 @@ p {
   color: rgb(24, 24, 24);
 }
 
-.hi {
-  color: #f58a07;
+.Logo {
+  color: #1768ac;
 }
 
-/* impression*/
+/* Introduction*/
 
 .impression {
   display: flex;
@@ -95,28 +96,11 @@ p {
   font-size: 200%;
 }
 
-.placeholder {
-  padding: 64px;
+.hi {
+  color: #f58a07;
 }
 
-.about {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 128px;
-  font-size: 200%;
-}
-
-.Flower {
-  padding-right: 128px;
-}
-
-.about-content {
-  padding-left: 128px;
-  padding-right: 520px;
-  font-size: larger;
-}
-
-.Image2 {
+.gif-box {
   width: 800px;
   height: 800px;
 }
@@ -126,40 +110,13 @@ p {
   height: auto;
 }
 
-.footer_box {
+/* About*/
+
+.about {
   display: flex;
-  justify-content: left;
-}
-
-.socials {
-  padding: 10px;
-}
-
-footer {
-  padding: 100px;
-  padding-top: 200px;
-  background-color: rgb(24, 24, 24);
-  color: white;
-}
-
-.endbox {
-  display: flex;
-  justify-content: center;
-}
-
-.empty {
-  width: 227px;
-  height: 240px;
-  background: transparent;
-}
-
-.Logo {
-  color: #1768ac;
-}
-
-.Logo2 {
-  width: 227px;
-  height: 240px;
+  justify-content: space-between;
+  padding-left: 128px;
+  font-size: 200%;
 }
 
 .boxy {
@@ -171,11 +128,54 @@ footer {
   font-size: 75%;
 }
 
-.placeholder {
+.flower {
+  padding-right: 128px;
+}
+
+.about-content {
+  padding-left: 128px;
+  padding-right: 520px;
+  font-size: larger;
+}
+
+.quote {
+  padding: 64px;
   padding-top: 128px;
   text-align: center;
   color: #7c7c7c;
 }
+
+/* Projects*/
+
+/* Footer*/
+
+.write {
+  padding-left: 64px;
+  padding-top: 200px;
+  color: #84ac17;
+}
+
+.form {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5%;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: left;
+}
+
+.socials {
+  padding: 10px;
+}
+
+.endbox {
+  display: flex;
+  justify-content: center;
+}
+
+/*mobile adjustment*/
 
 @media only screen and (max-width: 1200px) {
   .impression {
@@ -194,15 +194,4 @@ footer {
   .about-content {
     padding-right: 200px;
   }
-}
-
-.write {
-  padding-left: 64px;
-  padding-top: 200px;
-  color: #84ac17;
-}
-
-.form {
-  display: flex;
-  justify-content: space-evenly;
 }
