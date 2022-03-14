@@ -168,15 +168,12 @@ footer {
   font-size: 75%;
 }
 
-<<<<<<< HEAD
 .placeholder {
   padding-top: 128px;
   text-align: center;
   color: #7c7c7c;
 }
 
-=======
->>>>>>> dd62102551ef980e7d1d5a6ac4d5d4923e727060
 @media only screen and (max-width: 1200px) {
   .impression {
     padding-bottom: 50%;
