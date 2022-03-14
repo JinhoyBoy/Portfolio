@@ -15,9 +15,10 @@ h2 {
   color: #1768ac;
 }
 
-label {
-  display: block;
-  margin-bottom: 0.2em;
+.form {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
 }
 
 .container {
@@ -164,15 +165,6 @@ footer {
   font-size: 75%;
 }
 
-/*unity*/
-
-.unity-desktop {
-  display: flex;
-  justify-content: center;
-  padding: 15%;
-  padding-top: 15%;
-}
-
 @media only screen and (max-width: 1500px) {
   .impression {
     padding-bottom: 50%;
@@ -186,4 +178,14 @@ footer {
   .footer_box {
     padding-top: 50%;
   }
+}
+
+.write {
+  padding-left: 64px;
+  padding-top: 200px;
+  color: #84ac17;
+}
+
+.form {
+  background-color: #dfffb9;
 }
