@@ -113,6 +113,7 @@ p {
 .about-content {
   padding-left: 128px;
   padding-right: 520px;
+  font-size: larger;
 }
 
 .Image2 {
@@ -127,7 +128,7 @@ p {
 
 .footer_box {
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .socials {
@@ -137,11 +138,13 @@ p {
 footer {
   padding: 100px;
   padding-top: 200px;
+  background-color: rgb(24, 24, 24);
+  color: white;
 }
 
 .endbox {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .empty {
@@ -187,6 +190,10 @@ footer {
   .footer_box {
     padding-top: 50%;
   }
+
+  .about-content {
+    padding-right: 200px;
+  }
 }
 
 .write {
@@ -196,5 +203,6 @@ footer {
 }
 
 .form {
-  background-color: #dfffb9;
+  display: flex;
+  justify-content: space-evenly;
 }
