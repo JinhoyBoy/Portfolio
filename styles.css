@@ -15,6 +15,10 @@ h2 {
   color: #1768ac;
 }
 
+p {
+  font-weight: 550;
+}
+
 .form {
   display: flex;
   justify-content: center;
@@ -98,12 +102,17 @@ h2 {
 .about {
   display: flex;
   justify-content: space-between;
-  padding: 64px;
+  padding-left: 128px;
   font-size: 200%;
 }
 
-.about_text {
-  padding: 10%;
+.Flower {
+  padding-right: 128px;
+}
+
+.about-content {
+  padding-left: 128px;
+  padding-right: 520px;
 }
 
 .Image2 {
@@ -111,15 +120,9 @@ h2 {
   height: 800px;
 }
 
-img {
+.gif {
   max-width: 100%;
   height: auto;
-}
-
-.image_monkey {
-  position: absolute;
-  left: -24px;
-  top: 1328px;
 }
 
 .footer_box {
@@ -165,7 +168,13 @@ footer {
   font-size: 75%;
 }
 
-@media only screen and (max-width: 1500px) {
+.placeholder {
+  padding-top: 128px;
+  text-align: center;
+  color: #7c7c7c;
+}
+
+@media only screen and (max-width: 1200px) {
   .impression {
     padding-bottom: 50%;
     padding-top: 40%;
