@@ -46,7 +46,6 @@ footer {
 .right-side {
   display: flex;
   justify-content: right;
-  position: relative;
 }
 
 .nav-wrapper > .left-side > div {
