@@ -36,16 +36,16 @@ footer {
 .nav-wrapper {
   padding: 38px;
   font-weight: 600;
+  display: flex;
+  justify-content: space-between;
 }
 
 .left-side {
   display: flex;
-  position: fixed;
 }
 
 .right-side {
   display: flex;
-  justify-content: right;
 }
 
 .nav-wrapper > .left-side > div {
