@@ -21,8 +21,9 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Cube-Race</div>
+        <div id="unity-build-title">Cube-race</div>
       </div>
     </div>
     <script>
@@ -58,11 +59,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Website.loader.js";
+      var loaderUrl = buildUrl + "/Unity Cube-Game.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Website.data.unityweb",
-        frameworkUrl: buildUrl + "/Website.framework.js.unityweb",
-        codeUrl: buildUrl + "/Website.wasm.unityweb",
+        dataUrl: buildUrl + "/Unity Cube-Game.data.unityweb",
+        frameworkUrl: buildUrl + "/Unity Cube-Game.framework.js.unityweb",
+        codeUrl: buildUrl + "/Unity Cube-Game.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Cube-race",
@@ -105,6 +106,6 @@
       };
       document.body.appendChild(script);
     </script>
-
+  </body>
 </body>
 </html>
