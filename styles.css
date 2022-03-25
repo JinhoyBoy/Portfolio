@@ -171,6 +171,10 @@ footer {
   width: fit-content;
 }
 
+.space {
+  padding: 100px;
+}
+
 /* Footer*/
 
 .write {
